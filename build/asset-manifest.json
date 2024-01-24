@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HorizonHub/static/css/main.04230d9e.css",
+    "main.js": "/HorizonHub/static/js/main.575772af.js",
+    "index.html": "/HorizonHub/index.html",
+    "main.04230d9e.css.map": "/HorizonHub/static/css/main.04230d9e.css.map",
+    "main.575772af.js.map": "/HorizonHub/static/js/main.575772af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04230d9e.css",
+    "static/js/main.575772af.js"
+  ]
+}
