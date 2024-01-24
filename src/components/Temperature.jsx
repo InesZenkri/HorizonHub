@@ -1,5 +1,6 @@
 import React from 'react';
 import { formatTLT, CustomDate, round  } from '../makeitwork/weather'; 
+import { Icon } from '@iconify/react';
 import {
     UilTemperature,
     UilTear,
@@ -10,6 +11,31 @@ import {
     UilArrowDown,
   } from "@iconscout/react-unicons";
 function Temperature({ currentFormattedData }) {
+    const getWeatherIcon = (weatherDescription) => {
+        const iconMapping = {
+          '01d': 'meteocons:clear-day-fill',
+          '01n': 'meteocons:clear-night-fill',
+          '02d': 'meteocons:partly-cloudy-day-fog-fill',
+          '02n': 'meteocons:partly-cloudy-night-fog-fill',
+          '03d': 'meteocons:partly-cloudy-day-haze-fill',
+          '03n': 'meteocons:partly-cloudy-night-haze-fill',
+          '04d': 'meteocons:partly-cloudy-day-haze-fill',
+          '04n': 'meteocons:partly-cloudy-night-haze-fill',
+          '09d': 'meteocons:extreme-day-rain-fill',
+          '09n': 'meteocons:extreme-night-rain-fill',
+          '10d': 'meteocons:partly-cloudy-day-rain-fill',
+          '10n': 'meteocons:partly-cloudy-night-rain-fill',
+          '11d': 'meteocons:thunderstorms-day-overcast-fill',
+          '11n': 'meteocons:thunderstorms-night-extreme-fill',
+          '13d': 'meteocons:partly-cloudy-day-snow-fill',
+          '13n': 'meteocons:partly-cloudy-night-snow-fill',
+          '50d': 'meteocons:dust-wind-fill',
+        };
+
+        return iconMapping[weatherDescription.toLowerCase()] || 'meteocons:default-icon';
+    };
+    const weatherIcon = getWeatherIcon(currentFormattedData.icon);
+
   return (
     <div>
          <div>
@@ -27,10 +53,10 @@ function Temperature({ currentFormattedData }) {
     </div>
         <p className="text-4xl text-white flex justify-center">{round(currentFormattedData.temp)}°</p>
         <div className="flex items-center justify-center py-3 text-xl text-cyan-300" >
-        <img src={currentFormattedData.iconurl} alt="" className="w-15" />
-            <p className='wx-6 font-semibold'>
-                {currentFormattedData.description.charAt(0).toUpperCase() + currentFormattedData.description.slice(1)}
-            </p>
+            <Icon icon={weatherIcon} className="w-15" width="70"/>
+                <p className='wx-6 font-medium text-2xl'>
+                    {currentFormattedData.description.charAt(0).toUpperCase() + currentFormattedData.description.slice(1)}
+                </p>
         </div>
 
         <div className=" flex flex-row items-center text-white py-3 justify-center">

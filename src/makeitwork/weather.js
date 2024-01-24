@@ -3,7 +3,6 @@ import { DateTime } from "luxon";
 const API_KEY ="558b6b9ac644331a1081da7d76b84230";
 const BASE_URL ="https://api.openweathermap.org/data/2.5";
 
-const IconURL = (iconId) => `http://openweathermap.org/img/wn/${iconId}@2x.png`;
 
 const getData = (infotype, searchParams) => {
     const url = new URL(BASE_URL + "/" + infotype);
@@ -24,7 +23,7 @@ const formatCurrentData = (data) => {
             dt,
         } = data;
     
-    const { description, icon } = weather[0];
+    const { description, icon, main } = weather[0];
     
     return {
         description,
@@ -40,9 +39,10 @@ const formatCurrentData = (data) => {
         country,
         sunrise,
         sunset,
-        iconurl: IconURL(icon),
+        icon,
         speed,
         timezone,
+        main
         };
         } catch (error) {
             console.error("Error formatting current data:", error.message);
