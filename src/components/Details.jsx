@@ -41,7 +41,8 @@ function Details({h, currentFormattedData}) {
                 </div>
               ))
             ) : (
-              <div>
+              <div className="flex flex-col items-center justify-center text-white">
+
                 <p>No hourly forecast data available.</p>
                 <img src={logo} alt="Error" type="image/svg" className="object-cover h-50 w-96" />
               </div>

@@ -36,7 +36,7 @@ function App() {
     }
 }, [temperatureUnit]);
   return (
-   <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  from-cyan-500 to to-blue-700 `}>
+   <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  from-cyan-500  to-blue-700 `}>
       <Searchbar 
       onToggleTemperatureUnit={toggleTemperatureUnit}
       onCitySelect={handleCitySelection} />
@@ -51,3 +51,4 @@ function App() {
 }
 
 export default App;
+

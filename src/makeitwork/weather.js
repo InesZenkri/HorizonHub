@@ -1,4 +1,4 @@
-import { DateTime } from "luxon";
+import { DateTime } from 'luxon';
 import config from "./config";
 const API_KEY = config.API_KEY;
 const BASE_URL ="https://api.openweathermap.org/data/2.5";
@@ -67,8 +67,9 @@ const formatTLT = (
 ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
 const CustomDate = (secs, timezone, format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a") => {
-    const dt = DateTime.fromSeconds(secs).plus({ seconds: timezone });
-    const formattedDate = dt.toFormat(format);
+    const dt = DateTime.fromSeconds(secs, { zone: `UTC` });
+    const localDt = dt.plus({ seconds: timezone });
+    const formattedDate = localDt.toFormat(format);
     return formattedDate;
 };
 
@@ -80,7 +81,6 @@ const br = async(currentFormattedData) => {
     console.log(currentFormattedData);
     const lat = currentFormattedData.lat;
     const lon = currentFormattedData.lon;
-    console.log(lat,lon);
     const currentDate = new Date().toISOString();
     const brightSkyResponse = await fetch(`https://api.brightsky.dev/weather?lat=${lat}&lon=${lon}&date=${currentDate}`);
     const brightSkyData = await brightSkyResponse.json();
