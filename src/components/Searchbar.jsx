@@ -1,13 +1,14 @@
 import React, {useState } from "react";
 import { UilSearch, UilLocationPoint , UilMap} from "@iconscout/react-unicons";
-import { getFormattedData } from '../makeitwork/weather';
+import { getFormattedData ,CustomDate} from '../makeitwork/weather';
 
 function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
 
     const [searchQuery, setSearchQuery] = useState("");
     const [temperatureUnit, setTemperatureUnit] = useState('metric');
     const [currentLocation, setCurrentLocation] = useState(null);
-    
+    const [animate, setAnimate] = useState(false);
+
     const handleLocationClick = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -43,11 +44,23 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
             onCitySelect(searchQuery, temperatureUnit);
             setSearchQuery("");
             setCurrentLocation(null);
+        }else {
+          setAnimate(true);
+          setTimeout(() => {
+          setAnimate(false);
+            }, 500);
         }
         };
         
     const handleInputChange = (e) => {
+      if(e.target.value !== ""){
         setSearchQuery(e.target.value);
+      }else {
+        setAnimate(true);
+        setTimeout(() => {
+        setAnimate(false);
+        }, 500);
+      }
     };
 
     return (
@@ -64,7 +77,7 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
                     }
                 }}
                 placeholder=" Search for city.... "
-                className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase rounded-full"
+                className={`${animate ? 'animate-shake' : 'animate-none'} text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase rounded-full` }
                 />
                 <UilSearch
                     size={30}

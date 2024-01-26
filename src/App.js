@@ -4,48 +4,51 @@ import Details from './components/Details';
 import getFormattedData from './makeitwork/weather';
 import Searchbar from './components/Searchbar';
 import { useState, useEffect } from 'react';
-
+import Daily from './components/Daily';
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
-  const [temperatureUnit, setTemperatureUnit] = useState('metric');
 
-  const fetchWeather = async (city, unit) => {
+  const fetchWeather = async (city) => {
     try {
-      const data = await getFormattedData({ q: city, units: unit });
-      setWeatherData(data.currentFormattedData);
+      const data = await getFormattedData({ q: city});
+      console.log("data: ",data);
+      setWeatherData(data.data);
     } catch (error) {
       console.error('Error fetching weather data:', error);
     }
   };
 
   const handleCitySelection = (selectedCity) => {
-    fetchWeather(selectedCity, temperatureUnit);
+    fetchWeather(selectedCity);
 };;
 
 
-  const toggleTemperatureUnit = (unit) => {
-    setTemperatureUnit(unit);
-  };
+
   useEffect(() => {
     if (weatherData) {
-        fetchWeather(weatherData.name, temperatureUnit);
+        fetchWeather(weatherData.name);
     } else {
 
-        fetchWeather('Berlin', temperatureUnit);
+        fetchWeather('Berlin');
     }
-}, [temperatureUnit]);
+}, []);
   return (
-   <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  from-cyan-500  to-blue-700 `}>
+    <div
+      className="w-full h-screen bg-center flex flex-col items-center justify-center  lg:px-0"
+    >
+   <div className={` w-full h-screen bg-gradient-to-br px-2 from-cyan-500  to-blue-700 `}>
       <Searchbar 
-      onToggleTemperatureUnit={toggleTemperatureUnit}
       onCitySelect={handleCitySelection} />
       {weatherData && (
                 <>
                     <Temperature currentFormattedData={weatherData} />
                     <Details h="hourly forecast" currentFormattedData={weatherData} />
+                    <Daily h="hourly forecast" currentFormattedData={weatherData} />
+                    
                 </>
       )}
+   </div>
    </div>
   );
 }
