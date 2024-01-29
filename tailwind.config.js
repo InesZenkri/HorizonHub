@@ -6,7 +6,7 @@ theme: {
   },
   extend: {
     backgroundImage: {
-      gradientBg: "url('/src/icons/bg.ai')",
+      gradientBg: "url('/src/icons/bg.jpg')",
     },
     keyframes: {
       shake: {
@@ -22,7 +22,7 @@ theme: {
       },
     },
     animation: {
-      shake: "shake 150ms 2 linear",
+      shake: "shake 200ms 2 linear",
     },
   },
 },

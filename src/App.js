@@ -1,4 +1,5 @@
 import './App.css';
+import bg from './icons/bg.jpg';
 import Temperature from './components/Temperature';
 import Details from './components/Details';
 import getFormattedData from './makeitwork/weather';
@@ -8,7 +9,7 @@ import Daily from './components/Daily';
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
-
+  const [temperatureUnit, setTemperatureUnit] = useState('Celsius');
   const fetchWeather = async (city) => {
     try {
       const data = await getFormattedData({ q: city});
@@ -23,7 +24,9 @@ function App() {
     fetchWeather(selectedCity);
 };;
 
-
+const handleToggleTemperatureUnit = (unit) => {
+  setTemperatureUnit(unit);
+};
 
   useEffect(() => {
     if (weatherData) {
@@ -34,22 +37,31 @@ function App() {
     }
 }, []);
   return (
-    <div
-      className="w-full h-screen bg-center flex flex-col items-center justify-center  lg:px-0"
-    >
-   <div className={` w-full h-screen bg-gradient-to-br px-2 from-cyan-500  to-blue-700 `}>
+   <div className={` w-full h-screen bg-cover overflow-y-auto`}style={{ backgroundImage: `url(${bg})` }}>
       <Searchbar 
-      onCitySelect={handleCitySelection} />
+      onCitySelect={handleCitySelection}
+      onToggleTemperatureUnit={handleToggleTemperatureUnit} />
       {weatherData && (
                 <>
-                    <Temperature currentFormattedData={weatherData} />
-                    <Details h="hourly forecast" currentFormattedData={weatherData} />
-                    <Daily h="hourly forecast" currentFormattedData={weatherData} />
+                    <Temperature 
+                      currentFormattedData={weatherData} 
+                      temperatureUnit={temperatureUnit}
+                    />
+                    <Details
+                       h="hourly forecast" 
+                       currentFormattedData={weatherData} 
+                       temperatureUnit={temperatureUnit}
+                       />
+                    <Daily 
+                      h="hourly forecast" 
+                      currentFormattedData={weatherData} 
+                      temperatureUnit={temperatureUnit}
+                      />
                     
                 </>
       )}
    </div>
-   </div>
+ 
   );
 }
 

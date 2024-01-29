@@ -1,13 +1,13 @@
 import React, {useState } from "react";
 import { UilSearch, UilLocationPoint , UilMap} from "@iconscout/react-unicons";
-import { getFormattedData ,CustomDate} from '../makeitwork/weather';
 
-function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
+function Searchbar({  onCitySelect, onToggleTemperatureUnit})  {
 
     const [searchQuery, setSearchQuery] = useState("");
-    const [temperatureUnit, setTemperatureUnit] = useState('metric');
     const [currentLocation, setCurrentLocation] = useState(null);
+    const [temperatureUnit, setTemperatureUnit] = useState('Celsius');
     const [animate, setAnimate] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const handleLocationClick = () => {
         if (navigator.geolocation) {
@@ -16,13 +16,15 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
                 try {
+                  setLoading(true);
                   const reverseGeocodeUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
                   const reverseGeocodeResponse = await fetch(reverseGeocodeUrl);
                   const reverseGeocodeData = await reverseGeocodeResponse.json();
                   const city = reverseGeocodeData.city;
                   console.log("City:", city);
-                  onCitySelect(city,temperatureUnit);
-                } catch (error) {
+                  onCitySelect(city);
+                  setLoading(false);
+                }catch (error) {
                   console.error("Error getting weather data:", error.message);
                 }
               },
@@ -41,7 +43,7 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
 
     const handleSearchClick = async () => {
         if (searchQuery.trim() !== "") {
-            onCitySelect(searchQuery, temperatureUnit);
+            onCitySelect(searchQuery);
             setSearchQuery("");
             setCurrentLocation(null);
         }else {
@@ -63,9 +65,15 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
       }
     };
 
+    const handleToggleTemperatureUnit = (unit) => {
+      setTemperatureUnit(unit);
+      onToggleTemperatureUnit(unit);
+    };
+
     return (
-        <div className="flex flex-row justify-center my-6">
-            <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
+      
+        <div className="flex flex-row justify-center mx-1">
+            <div className="flex flex-row w-3/4 items-center justify-center space-x-4 my-3">
                 <input
                 type="text"
                 value={searchQuery}
@@ -100,17 +108,15 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
           <div className="flex flex-row w-1/4 items-center justify-center">
             <button
               name="metric"
-              onClick={() => onToggleTemperatureUnit('metric')}
-              className="text-xl text-white font-light transition ease-out hover:scale-125"
-            >
+             onClick={() => handleToggleTemperatureUnit('Celsius')}
+              className={` text-white font-light transition ease-out hover:scale-125 ${temperatureUnit === 'Celsius' ? 'font-medium text-2xl' : 'font-light'}`}>
               °C
             </button>
-            <p className="text-xl text-white mx-1">|</p>
+            <p className=" text-white mx-1">|</p>
             <button
               name="imperial"
-              onClick={() => onToggleTemperatureUnit('imperial')}
-              className="text-xl text-white font-light transition ease-out hover:scale-125"
-            >
+              onClick={() => handleToggleTemperatureUnit('Fahrenheit')}
+              className={` text-white font-light transition ease-out hover:scale-125 ${temperatureUnit === 'Fahrenheit' ? 'font-medium text-2xl' : 'font-light'}`}>
               °F
             </button>
           </div>
@@ -119,4 +125,5 @@ function Searchbar({ onToggleTemperatureUnit, onCitySelect})  {
 }
 
 export default Searchbar
+
 
