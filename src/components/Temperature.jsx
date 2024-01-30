@@ -1,6 +1,6 @@
 import React from 'react';
 import { CustomDate, round  } from '../makeitwork/weather'; 
-import { Icon } from '@iconify/react';
+//import { Icon } from '@iconify/react';
 import {
     UilTemperature,
     UilTear,

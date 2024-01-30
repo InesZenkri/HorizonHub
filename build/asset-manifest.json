@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/HorizonHub/static/css/main.7e1ebf51.css",
-    "main.js": "/HorizonHub/static/js/main.5134652b.js",
+    "main.js": "/HorizonHub/static/js/main.c0ce112e.js",
     "static/media/bg.jpg": "/HorizonHub/static/media/bg.fe6cd0d8bcd5c44cd7c0.jpg",
     "index.html": "/HorizonHub/index.html",
     "main.7e1ebf51.css.map": "/HorizonHub/static/css/main.7e1ebf51.css.map",
-    "main.5134652b.js.map": "/HorizonHub/static/js/main.5134652b.js.map"
+    "main.c0ce112e.js.map": "/HorizonHub/static/js/main.c0ce112e.js.map"
   },
   "entrypoints": [
     "static/css/main.7e1ebf51.css",
-    "static/js/main.5134652b.js"
+    "static/js/main.c0ce112e.js"
   ]
 }

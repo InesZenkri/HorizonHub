@@ -1,6 +1,6 @@
 import React from 'react'
-import { Icon } from '@iconify/react';
-import { useState, useEffect } from 'react';
+//import { Icon } from '@iconify/react';
+//import { useState, useEffect } from 'react';
 import { round  } from '../makeitwork/weather'; 
 import { DateTime } from 'luxon';
 import {
@@ -35,7 +35,7 @@ function Daily({h, currentFormattedData ,temperatureUnit}) {
                   style={{ backgroundColor: 'rgb(255, 255, 255, 0.2)', borderRadius: '8px' }}
                 >
                   <p className="font-light text-sm">{date.toFormat('cccc')}</p>
-                  <img src={dayItem.day.condition.icon} className="my-1" type="image/png" />
+                  <img src={dayItem.day.condition.icon} className="my-1" type="image/png" alt={dayItem.day.condition.text} />
                   <p className="font-light text-sm flex flex-row">
                   <UilArrowUp size={18} /> {temperatureUnit === 'Celsius' ? round(dayItem.day.maxtemp_c) : round(dayItem.day.maxtemp_f)}°, <UilArrowDown size={18} /> {temperatureUnit === 'Celsius' ? round(dayItem.day.mintemp_c) : round(dayItem.day.mintemp_f)}°
                   </p>

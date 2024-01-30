@@ -1,8 +1,8 @@
 import React from 'react'
-import { Icon } from '@iconify/react';
-import { useState, useEffect } from 'react';
+//import { Icon } from '@iconify/react';
+//import { useState, useEffect } from 'react';
 import { round  } from '../makeitwork/weather'; 
-import {
+/*import {
   UilTemperature,
   UilTear,
   UilWind,
@@ -10,7 +10,7 @@ import {
   UilSunset,
   UilArrowUp,
   UilArrowDown,
-} from "@iconscout/react-unicons";
+} from "@iconscout/react-unicons";*/
 function Details({h, currentFormattedData ,temperatureUnit}) {
   return (
     <div className='mx-3'>
