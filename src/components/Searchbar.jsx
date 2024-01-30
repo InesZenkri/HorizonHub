@@ -1,5 +1,5 @@
 import React, {useState } from "react";
-import { UilSearch, UilLocationPoint , UilMap} from "@iconscout/react-unicons";
+import { UilSearch, UilLocationPoint , UilMap, UilSync } from "@iconscout/react-unicons";
 
 function Searchbar({  onCitySelect, onToggleTemperatureUnit})  {
 
@@ -7,16 +7,17 @@ function Searchbar({  onCitySelect, onToggleTemperatureUnit})  {
     const [currentLocation, setCurrentLocation] = useState(null);
     const [temperatureUnit, setTemperatureUnit] = useState('Celsius');
     const [animate, setAnimate] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const handleLocationClick = () => {
+      setLoading(true);
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
               async (position) => {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
                 try {
-                  setLoading(true);
+                  setLoading(true);// started
                   const reverseGeocodeUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
                   const reverseGeocodeResponse = await fetch(reverseGeocodeUrl);
                   const reverseGeocodeData = await reverseGeocodeResponse.json();
@@ -26,6 +27,8 @@ function Searchbar({  onCitySelect, onToggleTemperatureUnit})  {
                   setLoading(false);
                 }catch (error) {
                   console.error("Error getting weather data:", error.message);
+                } finally {
+                  setLoading(false); // data fetching is complete
                 }
               },
             (error) => {
@@ -54,16 +57,17 @@ function Searchbar({  onCitySelect, onToggleTemperatureUnit})  {
         }
         };
         
-    const handleInputChange = (e) => {
-      if(e.target.value !== ""){
-        setSearchQuery(e.target.value);
-      }else {
-        setAnimate(true);
-        setTimeout(() => {
-        setAnimate(false);
-        }, 500);
-      }
-    };
+        const handleInputChange = (e) => {
+          if (e.target.value.trim() !== "") {
+            setSearchQuery(e.target.value);
+          } else {
+            setAnimate(true);
+            setSearchQuery("");
+            setTimeout(() => {
+              setAnimate(false);
+            }, 500);
+          }
+        };
 
     const handleToggleTemperatureUnit = (unit) => {
       setTemperatureUnit(unit);
@@ -92,11 +96,16 @@ function Searchbar({  onCitySelect, onToggleTemperatureUnit})  {
                     onClick={handleSearchClick}
                     className="text-white cursor-pointer transition ease-out hover:scale-125"
                 />
-                <UilLocationPoint
-                    size={30}
-                    onClick={handleLocationClick}
-                    className="text-white cursor-pointer transition ease-out hover:scale-125"
-                />
+                {loading ? (
+                      <UilSync size={30} className="text-white cursor-pointer animate-spin" />
+                    ) : (
+                      <UilLocationPoint
+                        size={30}
+                        onClick={handleLocationClick}
+                        className="text-white cursor-pointer transition ease-out hover:scale-125"
+                      />
+                    )}
+
                 <UilMap
                 size={30}
                 className="text-white cursor-pointer transition ease-out hover:scale-125"
