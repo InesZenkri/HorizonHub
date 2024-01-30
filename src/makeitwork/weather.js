@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon';
 import config from "./config";
 const API_KEY = config.API_KEY;
-const BASE_URL ="http://api.weatherapi.com/v1";
+const BASE_URL ="https://api.weatherapi.com/v1";
 
 
 const getData = (searchParams) => {
