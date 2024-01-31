@@ -31,7 +31,7 @@ Here's the stack of technologies employed in building this project:
 This diverse set of technologies collaborates to create a feature-rich and user-friendly weather application.
 - - -
 ## 📟 Lookslike 
-![Weather App](build/looklike.png)
+![Weather App](looklike.png)
 
 - - - 
 ## 🖼️ Icons
