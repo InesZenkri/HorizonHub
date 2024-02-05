@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6775],{6775:(e,a,p)=>{e.exports=p.p+"static/media/overcast.d21b546a8f0745e6608e.svg"}}]);

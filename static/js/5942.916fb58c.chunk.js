@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5942],{5942:(e,a,p)=>{e.exports=p.p+"static/media/snowman.a6e1ed93b27ca365c8d5.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[289],{289:(e,a,p)=>{e.exports=p.p+"static/media/dust-day.3e639d400858e79175f5.svg"}}]);

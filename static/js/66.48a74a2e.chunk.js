@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[66],{66:(e,a,p)=>{e.exports=p.p+"static/media/hail.d524998eaed38c51d962.svg"}}]);

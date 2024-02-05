@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9802],{9802:(e,a,p)=>{e.exports=p.p+"static/media/code-green.ff707af649691503fa98.svg"}}]);

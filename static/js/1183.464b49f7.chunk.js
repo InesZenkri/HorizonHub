@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1183],{1183:(e,a,s)=>{e.exports=s.p+"static/media/thunderstorms-day.2cf9d127c1d744e232a4.svg"}}]);

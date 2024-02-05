@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8640],{8640:(e,a,p)=>{e.exports=p.p+"static/media/partly-cloudy-day-sleet.b7b708c4d31c9ee57958.svg"}}]);

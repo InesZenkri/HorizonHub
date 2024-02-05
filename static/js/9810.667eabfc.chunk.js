@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9810],{9810:(e,a,p)=>{e.exports=p.p+"static/media/thermometer-moon.37b022ec751f0a8ad2c0.svg"}}]);

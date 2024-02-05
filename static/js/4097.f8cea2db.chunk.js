@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[4097],{4097:(a,e,p)=>{a.exports=p.p+"static/media/not-available.30bbb31b3565c565aaf1.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5010],{5010:(e,a,p)=>{e.exports=p.p+"static/media/extreme-smoke.a7f5c492c0e0aec72bc3.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2979],{2979:(e,s,a)=>{e.exports=a.p+"static/media/thunderstorms-day-overcast-snow.6febf201f30a354cf319.svg"}}]);

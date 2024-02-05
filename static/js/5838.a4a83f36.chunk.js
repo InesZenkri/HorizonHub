@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5838],{5838:(e,a,t)=>{e.exports=t.p+"static/media/thermometer-fahrenheit.6cee0ca2a8f5b7af7f17.svg"}}]);

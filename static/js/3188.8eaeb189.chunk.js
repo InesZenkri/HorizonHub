@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3188],{3188:(e,a,p)=>{e.exports=p.p+"static/media/horizon.a9e1fac69bf4d98037db.svg"}}]);

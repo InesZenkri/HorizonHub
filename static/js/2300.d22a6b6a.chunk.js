@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2300],{2300:(e,a,s)=>{e.exports=s.p+"static/media/thunderstorms-extreme-snow.3aded2a8ff9fa99de389.svg"}}]);

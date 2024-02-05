@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6822],{6822:(e,p,s)=>{e.exports=s.p+"static/media/pollen-grass.bfed374b33eb828cf70d.svg"}}]);

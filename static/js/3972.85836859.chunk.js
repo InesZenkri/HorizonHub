@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3972],{3972:(e,a,p)=>{e.exports=p.p+"static/media/partly-cloudy-day-smoke.61dfd27127ce0b9f9333.svg"}}]);

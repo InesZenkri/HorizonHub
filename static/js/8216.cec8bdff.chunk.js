@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8216],{8216:(e,s,a)=>{e.exports=a.p+"static/media/celsius.900383b9b54d1d206f0a.svg"}}]);

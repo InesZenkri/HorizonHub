@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3662],{3662:(e,a,p)=>{e.exports=p.p+"static/media/extreme-day-fog.82e30310e8ddd9e3aed3.svg"}}]);

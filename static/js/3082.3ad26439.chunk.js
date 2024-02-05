@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3082],{3082:(e,a,p)=>{e.exports=p.p+"static/media/code-red.ae90250dc24c3c4b95ff.svg"}}]);

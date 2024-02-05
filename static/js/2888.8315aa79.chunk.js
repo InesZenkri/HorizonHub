@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2888],{2888:(e,a,p)=>{e.exports=p.p+"static/media/partly-cloudy-night-snow.9fe6a7e3ee777fd5d18e.svg"}}]);

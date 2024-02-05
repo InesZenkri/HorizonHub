@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2961],{2961:(e,a,p)=>{e.exports=p.p+"static/media/time-morning.7717d6d67eec4dd4ebaa.svg"}}]);

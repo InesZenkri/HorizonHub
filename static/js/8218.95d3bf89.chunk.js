@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8218],{5755:(e,p,a)=>{e.exports=a.p+"static/media/cloudy.73c058e1e92399013d7c.svg"}}]);

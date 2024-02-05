@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[4769],{4769:(e,a,p)=>{e.exports=p.p+"static/media/pollen-flower.fbaf2dc0da8b77ff7594.svg"}}]);

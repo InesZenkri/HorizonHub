@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[7344],{7344:(e,a,p)=>{e.exports=p.p+"static/media/uv-index-11.9a33176a0e8a0db67d6e.svg"}}]);

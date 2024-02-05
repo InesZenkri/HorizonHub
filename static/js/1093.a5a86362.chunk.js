@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1093],{1093:(a,e,p)=>{a.exports=p.p+"static/media/flag-storm-warning.daa8df8978a04d583b56.svg"}}]);

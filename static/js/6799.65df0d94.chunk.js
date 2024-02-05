@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6799],{6799:(e,a,p)=>{e.exports=p.p+"static/media/wind-offshore.9d5a4fed5510eac4fb55.svg"}}]);

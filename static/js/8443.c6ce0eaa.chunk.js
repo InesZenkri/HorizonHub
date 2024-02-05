@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8443],{8443:(e,a,p)=>{e.exports=p.p+"static/media/barometer.61bbfb382c4f397f45e4.svg"}}]);

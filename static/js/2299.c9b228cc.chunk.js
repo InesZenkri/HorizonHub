@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2299],{2299:(e,a,p)=>{e.exports=p.p+"static/media/lightning-bolt.27479e9e616a232cb94b.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1057],{1057:(e,s,a)=>{e.exports=a.p+"static/media/thunderstorms-day-overcast.4d949dc445b1b45242d4.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9175],{9175:(e,a,s)=>{e.exports=s.p+"static/media/falling-stars.1df3779a8520c78f00de.svg"}}]);

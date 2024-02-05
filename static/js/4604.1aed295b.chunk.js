@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[4604],{4604:(e,a,p)=>{e.exports=p.p+"static/media/dust-wind.5b809cf833641a8c6c3f.svg"}}]);

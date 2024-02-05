@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[7386],{7386:(e,a,p)=>{e.exports=p.p+"static/media/alert-falling-rocks.be6152f54a18bf2ebd81.svg"}}]);

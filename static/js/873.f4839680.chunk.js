@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[873],{873:(e,a,p)=>{e.exports=p.p+"static/media/extreme-night-snow.4e7ea627051188823bd1.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[4280],{4280:(e,a,p)=>{e.exports=p.p+"static/media/code-yellow.3409f0227616a0906810.svg"}}]);

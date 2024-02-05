@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8390],{8390:(e,a,p)=>{e.exports=p.p+"static/media/windsock-weak.aa756ed820088e86adb4.svg"}}]);

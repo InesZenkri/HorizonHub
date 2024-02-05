@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9718],{9718:(e,c,a)=>{e.exports=a.p+"static/media/thunderstorms-extreme-rain.c1232ccc3caccd3851fc.svg"}}]);

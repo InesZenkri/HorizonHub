@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2621],{2621:(e,a,p)=>{e.exports=p.p+"static/media/clear-night.cc5c9e4da17d8f345e59.svg"}}]);

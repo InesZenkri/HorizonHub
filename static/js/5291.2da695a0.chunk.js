@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5291],{5291:(e,a,p)=>{e.exports=p.p+"static/media/beanie.03771b316cf9e06d9e1c.svg"}}]);

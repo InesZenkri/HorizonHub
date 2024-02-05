@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5412],{5412:(e,a,p)=>{e.exports=p.p+"static/media/moon-last-quarter.8245bb5048fdd86f7df8.svg"}}]);

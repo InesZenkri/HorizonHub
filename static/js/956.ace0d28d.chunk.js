@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[956],{956:(e,a,p)=>{e.exports=p.p+"static/media/thermometer-warmer.65653cb30ab7a55808e0.svg"}}]);
