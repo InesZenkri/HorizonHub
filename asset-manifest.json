@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HorizonHub/static/css/main.c2dd62d3.css",
-    "main.js": "/HorizonHub/static/js/main.9d1f7589.js",
+    "main.css": "/HorizonHub/static/css/main.820bd987.css",
+    "main.js": "/HorizonHub/static/js/main.c6112520.js",
     "static/js/4553.4c897e1e.chunk.js": "/HorizonHub/static/js/4553.4c897e1e.chunk.js",
     "static/js/7386.034b351b.chunk.js": "/HorizonHub/static/js/7386.034b351b.chunk.js",
     "static/js/8443.c6ce0eaa.chunk.js": "/HorizonHub/static/js/8443.c6ce0eaa.chunk.js",
@@ -435,8 +435,8 @@
     "static/media/mist.svg": "/HorizonHub/static/media/mist.32e665d921e74ac88afb.svg",
     "static/media/flag-small-craft-advisory.svg": "/HorizonHub/static/media/flag-small-craft-advisory.a0dac587deb95786d7a0.svg",
     "static/media/wind-beaufort-11.svg": "/HorizonHub/static/media/wind-beaufort-11.d07815d17f5a5a2026df.svg",
-    "static/media/sunset.svg": "/HorizonHub/static/media/sunset.7f6feb3d075d2793e454.svg",
-    "static/media/sunrise.svg": "/HorizonHub/static/media/sunrise.896f5a009d92f80ea351.svg",
+    "static/media/sunset.svg": "/HorizonHub/static/media/sunset.7f6feb3d075d2793e454de0690d9685e.svg",
+    "static/media/sunrise.svg": "/HorizonHub/static/media/sunrise.896f5a009d92f80ea351ff3705b632fa.svg",
     "static/media/wind-beaufort-7.svg": "/HorizonHub/static/media/wind-beaufort-7.8493df5fb92d5b510082.svg",
     "static/media/moonset.svg": "/HorizonHub/static/media/moonset.e7dc9001b9f8808ed96e.svg",
     "static/media/wind-beaufort-4.svg": "/HorizonHub/static/media/wind-beaufort-4.7ac98e4d66a4f787d825.svg",
@@ -475,11 +475,11 @@
     "static/media/thermometer-mercury.svg": "/HorizonHub/static/media/thermometer-mercury.698604e7aee88fe4acae.svg",
     "static/media/not-available.svg": "/HorizonHub/static/media/not-available.30bbb31b3565c565aaf1.svg",
     "static/media/moon-new.svg": "/HorizonHub/static/media/moon-new.d37287916534696b7428.svg",
-    "main.c2dd62d3.css.map": "/HorizonHub/static/css/main.c2dd62d3.css.map",
-    "main.9d1f7589.js.map": "/HorizonHub/static/js/main.9d1f7589.js.map"
+    "main.820bd987.css.map": "/HorizonHub/static/css/main.820bd987.css.map",
+    "main.c6112520.js.map": "/HorizonHub/static/js/main.c6112520.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2dd62d3.css",
-    "static/js/main.9d1f7589.js"
+    "static/css/main.820bd987.css",
+    "static/js/main.c6112520.js"
   ]
 }
