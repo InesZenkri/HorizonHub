@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "https://ineszenkri.github.io/HorizonHub/",
   "display": "standalone",
-  "theme_color": "#5b8fd4",
-  "background_color": "#5b8fd4"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
